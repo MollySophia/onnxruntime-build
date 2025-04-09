@@ -122,7 +122,7 @@ jobs:
 
           zip -r ${dst}.zip $dst/
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: steps.cache-build-result.outputs.cache-hit != 'true'
         with:
           name: onnxruntime-wasm-static_lib-simd-${ONNXRUNTIME_VERSION}
