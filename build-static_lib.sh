@@ -50,6 +50,7 @@ cmake \
     -D CMAKE_INSTALL_PREFIX=$OUTPUT_DIR \
     -D ONNXRUNTIME_SOURCE_DIR=$(pwd)/$ONNXRUNTIME_SOURCE_DIR \
     --compile-no-warning-as-error \
+    -D CMAKE_POLICY_VERSION_MINIMUM=3.5 \
     $CMAKE_OPTIONS
 cmake \
     --build $BUILD_DIR \
